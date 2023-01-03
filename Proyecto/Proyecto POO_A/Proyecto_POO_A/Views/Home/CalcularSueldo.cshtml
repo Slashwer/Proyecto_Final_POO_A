@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Proyecto_POO_A.Models.Persona>
+
+@{
+    ViewBag.Title = "Calcular Sueldo";
+}
+
+<h2>Resultados de cada empleado</h2>
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trabajo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sueldo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HorasTrabajadas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SueldoHora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rendimiento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sueldo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorasTrabajadas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SueldoHora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rendimiento)
+        </td>
+        <td>
+        </td>
+    </tr>
+}
+</table>

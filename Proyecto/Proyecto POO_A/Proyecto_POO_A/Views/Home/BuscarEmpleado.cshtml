@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Proyecto_POO_A.Models.Persona>
+@{
+    ViewBag.Title = "Buscar Empleado";
+}
+
+<h2>Buscar Empleado</h2>
+
+<form asp-controller="Usuarios" asp-action="BuscareEmpleado">
+    <p>
+        Inserte el Nombre : <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="btn btn-sm btn-dark /" />
+    </p>
+</form>
+
+<h2>Datos disponibles para buscar</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trabajo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sueldo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trabajo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sueldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaModificacion)
+            </td>
+          
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Volver a buscar", "BuscarEmpleado")
+</div>
