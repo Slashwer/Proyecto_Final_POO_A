@@ -8,6 +8,7 @@ using System.Xml.Schema;
 
 namespace Proyecto_POO_A.Controllers
 {
+    //El patron utilizado en este proyecto es MVC la cual sea creo a partir de una plantilla ASP.net a esta le hemos agregado las funciones que necesita nuestra aplicacion de acuerdo a la arquitectura del mismo
     //Este es un controlador la cual permite al usuario interactuar con la aplicacion de acuerdo a cada funcion que sea solicitada
     public class HomeController : Controller
     {
